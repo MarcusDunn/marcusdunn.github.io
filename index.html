@@ -14,27 +14,27 @@
 
 <body>
 
-<div style="text-align: center; text-justify: newspaper">
-    <h1>Marcus Dunn</h1>
-    <h4><span id="career_path"></span></h4>
+<div style="text-align: center; padding-left: 25%; padding-right: 25%">
+    <h1>Marcus Dunn, </h1>
+    <h2><span id="career_path"></span></h2>
     <p>
         Hello! I'm Marcus Dunn, currently attending the University of Victoria for Computer Science with an option in
         Theory. My current largest
         project is working at <a
-            href="https://leftindust.com/">leftindust</a> where I've created the backend for an Electronic Medical
+            href="https://leftindust.com/">leftindust</a> where I've created the <a href="https://github.com/MarcusDunn/leftindust-backend">backend</a> for an Electronic Medical
         Records System. I have a habit of procrastinating schoolwork by writing code which has lead to <a
             href="https://marcusdunn.github.io">this</a>, a <i>useful</i> <a
             href="https://github.com/MarcusDunn/yolo_mark_rs">app</a>
         and a mild proficiency in a bunch of increasingly <i>less useful</i> languages including <span id="language"
                                                                                                        onmouseenter="change_lang()"
-                                                                                                       onmousedown="change_lang()">coq</span>.
+                                                                                                       onmousedown="change_lang()"></span>.
         My poison of choice at the moment however is Rust, Kotlin or Python depending on the problem I am trying to
         solve. I'll also produce pretty reasonable typescript in your framework of choice if I'm forced to (and
         javascript if I'm <i>really</i> forced to).
     </p>
 
     <p>
-        <b>I pride myself code that is (in order)</b>
+        I pride myself code that is (in order):
         <br>
         readable to someone familiar with the language and problem domain
         <br>
@@ -48,18 +48,15 @@
         If that interests you in any way, let me know:
     </p>
 
-    <div>
+
         <h4>Contact Info</h4>
         Email: <a href="mailto:marcus.s.dunn@gmail.com">marcus.s.dunn@gmail.com</a>
         <br>
         Github: <a href="https://github.com/MarcusDunn">MarcusDunn</a>
-    </div>
-    <div>
         <h4>Projects of Note</h4>
         <ul>
             <li>
-                An end to end Machine learning pipeline for segmentation and OCR
-                meters (<a href="https://www.service-link.ca/">ServiceLink</a>)
+                An end to end Machine learning pipeline for segmentation and OCR (<a href="https://www.service-link.ca/">ServiceLink</a>)
             </li>
             <li>A Secure Federated Graphql API for accessing and updating medical records (<a
                     href="https://leftindust.com">leftindust</a>)
@@ -74,48 +71,49 @@
             </li>
             <li>
                 A syntax highlighter for arbitrary REPLs (<a href="https://github.com/MarcusDunn/spice">Personal
-                Project</a>)
+                Project</a>) <b>WIP</b>
             </li>
         </ul>
-    </div>
 </div>
 
 <script>
     let career_paths = [
-        "developer",
-        "software engineer",
-        "nerd",
-        "coder",
-        "hacker",
         "lost university student",
         "horrible speller",
+        "hacker",
+        "coder",
+        "software engineer",
+        "developer",
     ]
-    let career_handler = (times) => {
+    let career_paths_current_index = 0
+    let career_handler = () => {
         let career_path_dom_element = document.getElementById("career_path");
-        if (times < 10) {
-            career_path_dom_element.innerHTML = career_paths[Math.floor(Math.random() * 4)];
-            setTimeout(() => career_handler(times + 1), times * 100)
-        } else {
-            career_path_dom_element.innerHTML = "developer"
+        career_path_dom_element.innerText = career_paths[career_paths_current_index]
+        career_paths_current_index++;
+        if (career_paths_current_index !== career_paths.length) {
+            setTimeout(career_handler, career_paths_current_index * 200)
         }
     };
-    setTimeout(() => career_handler(1), 100)
+    setTimeout(() => career_handler(), 100)
+
 
     let languages = [
         "coq",
         "idris",
         "haskell",
         "clojure",
-        "idris2",
         "zig"
     ]
 
     let change_lang = () => {
         let lang_dom_element = document.getElementById("language");
-        lang_dom_element.innerText = languages[Math.floor(Math.random() * languages.length)]
+        lang_dom_element.innerText = languages
+            .sort((_, __) => Math.random() * 2 - 1)
+            .reduce((acc, x, i) => acc + x + ((i === languages.length - 2) ? ", and " : ", "), "").slice(0, -2)
     }
 
-</script>
+    change_lang()
 
+</script>
 </body>
 </html> 
