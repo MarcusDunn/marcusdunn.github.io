@@ -39,30 +39,36 @@
 
 <body>
 
-<div style="text-align: center; padding-left: 25%; padding-right: 25%">
+<div style="text-align: center;
+ padding-right: 10%;
+ padding-left: 10%;
+ @media (max-width: 800px) {
+    padding-right: 25%;
+    padding-left: 25%
+};">
     <h1>Marcus Dunn</h1>
     <span id="career_path"></span>
     <p>
-        Hello! I'm Marcus Dunn, currently attending the University of Victoria for Computer Science. My current largest project is working at <a href="https://leftindust.com/">leftindust</a> where I've created the <a href="https://github.com/MarcusDunn/leftindust-backend">backend</a> for an Electronic Medical Records System.
+        Hello! I'm Marcus Dunn, currently a student at the University of Victoria for Computer Science. My current
+        largest project is working at <a href="https://leftindust.com/">leftindust</a> where I've created the backend
+        for an Electronic Medical Records System.
     </p>
     <p>
-        I have a habit of procrastinating schoolwork by writing code which has lead to <a href="https://marcusdunn.github.io">this</a>, a <i>useful</i> <a href="https://github.com/MarcusDunn/yolo_mark_rs">app</a> and a mild proficiency in Haskell and a bunch of increasingly <i>less useful</i> languages including <span id="language" onmouseenter="change_lang()">coq, idris, and clojure</span>.
+        I have a habit of procrastinating schoolwork by writing code which has lead to <a
+            href="https://marcusdunn.github.io">this</a>, a <i>useful</i> <a
+            href="https://github.com/MarcusDunn/yolo_mark_rs">app</a> and a mild proficiency in Haskell and a bunch of
+        increasingly <i>less used</i> languages including <span id="language" onmouseenter="change_lang()">zig, idris, and clojure</span>.
     </p>
     <p>
-        My poison of choice at the moment however is Rust, Java/Kotlin or Python depending on the problem I am trying to solve. I'll also produce pretty reasonable typescript in your framework of choice if I'm forced to (and javascript if I'm <i>really</i> forced to).
+        My poison of choice at the moment however is Rust, Java/Kotlin or Python depending on the problem I am trying to
+        solve. I'll also produce pretty reasonable typescript in your framework of choice if I'm forced to (and
+        javascript if I'm <i>really</i> forced to).
     </p>
     <p>
-        I'm currently working at <a href="https://www.service-link.ca/">servicelink</a> creating and using tools for AI development.
+        As for right now I'm part of a fantastic research team doing work in security. In what time I have left I try to
+        keep my project at <a href="https://www.service-link.ca/">servicelink</a> afloat, leading a team in creating and
+        using tools in AI for mobile workforce management.
     </p>
-
-
-    <h2>Contact Info</h2>
-
-    <ul>
-        <li>Email: <a href="mailto:marcus.s.dunn@gmail.com">marcus.s.dunn@gmail.com</a></li>
-        <li>Github: <a href="https://github.com/MarcusDunn">MarcusDunn</a></li>
-        <li>Discord: marcus#0744</li>
-    </ul>
 
     <h2>Projects of Note</h2>
     <ul>
@@ -72,10 +78,12 @@
         <li>A Secure Federated Graphql API for accessing and updating medical records (<a href="https://leftindust.com">leftindust</a>)
         </li>
         <li>
-            An Image Labeling application for Yolo/Darknet (<a href="https://github.com/MarcusDunn/yolo_mark_rs">Personal Project</a>)
+            An Image Labeling application for Yolo/Darknet (<a href="https://github.com/MarcusDunn/yolo_mark_rs">Personal
+            Project</a>)
         </li>
         <li>
-            An Implementation of Dependant Types in Kotlin (<a href="https://github.com/MarcusDunn/order">Personal Project</a>)
+            An Implementation of Dependant Types in Kotlin (<a href="https://github.com/MarcusDunn/order">Personal
+            Project</a>)
         </li>
         <li>
             Mapping around the UVic Campus (<a href="https://github.com/Vikelabs/maps">VikeLabs</a>)
@@ -84,68 +92,102 @@
             A carpooling webapp (<a href="https://github.com/CobeyH/SENG-480A">School Project</a>)
         </li>
         <li>
-            A syntax highlighter for arbitrary REPLs (<a href="https://github.com/MarcusDunn/spice">PersonalProject</a>) <span style="font-weight: lighter">on hold :(</span>
+            A syntax highlighter for arbitrary REPLs (<a href="https://github.com/MarcusDunn/spice">PersonalProject</a>)
+            <span style="font-weight: lighter">on hold :(</span>
         </li>
     </ul>
     <h2>Open Source Contributions</h2>
     <ul>
         <li>
-            Stabilized bindings after at in rustc (<a href="https://github.com/rust-lang/rust/pull/85305">Pull Request</a> | <a href="https://blog.rust-lang.org/2021/10/21/Rust-1.56.0.html#new-bindings-in-binding--pattern">Blog Post</a>)
+            Stabilized bindings after at in <a href="https://rust-lang.org">rustc</a> (<a
+                href="https://github.com/rust-lang/rust/pull/85305">Pull Request</a> | <a
+                href="https://blog.rust-lang.org/2021/10/21/Rust-1.56.0.html#new-bindings-in-binding--pattern">Blog
+            Post</a>)
         </li>
         <li>
-            Added servers support for contracts in htt4k (<a href="https://github.com/http4k/http4k/pull/674">Pull Request</a>)
+            Added servers support for contracts in <a href="https://www.http4k.org/">htt4k</a> (<a
+                href="https://github.com/http4k/http4k/pull/674">Pull Request</a>)
         </li>
         <li>
-            Support for easy complex number creation in multik (<a href="https://github.com/Kotlin/multik/pull/67#event-5909879484">Pull Request</a>)
+            Support for easy complex number creation in multik (<a
+                href="https://github.com/Kotlin/multik/pull/67#event-5909879484">Pull Request</a>)
+        </li>
+        <li>
+            Allowed multiple files to be uploaded at once in swagger-typescript-api (<a
+                href="https://github.com/acacode/swagger-typescript-api/pull/350">Pull request</a>)
         </li>
     </ul>
+
+    <h2>Contact Info</h2>
+
+    <ul>
+        <li>Email: <a href="mailto:marcus.s.dunn@gmail.com">marcus.s.dunn@gmail.com</a></li>
+        <li>Github: <a href="https://github.com/MarcusDunn">MarcusDunn</a></li>
+        <li>Discord: marcus#0744</li>
+    </ul>
+
+    <div style="position: absolute; right: 0; padding: 10px">
+        <div style="padding-left: 10px; padding-right: 10px; border: 1px solid rgba(255,255,255,0.7);">
+            <p style="font-weight: lighter; opacity: 0.7">Built with <a
+                    href="http://vanilla-js.com/">vanilla-js</a></p>
+        </div>
+    </div>
+
+
     <h4 id="type_me"></h4>
 </div>
 
 <script>
     let career_paths = [
-        "<h2 style='font-family: monospace; height: 30px; font-weight: normal'>Lost University Student</h2>",
-        "<h2 style='font-family: monospace; height: 30px; font-weight: normal' >Horrible Speller</h2>",
-        "<h2 style='font-family: monospace; height: 30px; font-weight: bold'>Linux User</h2>",
+        "<h2 style='font-family: monospace; height: 30px; font-weight: lighter'>Lost University Student</h2>",
+        "<h2 style='font-family: monospace; height: 30px; font-weight: lighter' >Horrible Speller</h2>",
+        "<h2 style='font-family: monospace; height: 30px; font-weight: normal'>Linux User</h2>",
+        "<h2 style='font-family: monospace; height: 30px; font-weight: normal'>Researcher</h2>",
+        "<h2 style='font-family: monospace; height: 30px; font-weight: bold'>Shameless Rust Proponent</h2>",
         "<h2 style='font-family: monospace; height: 30px; font-weight: bold'>Coder</h2>",
-        "<h2 style='font-family: monospace; height: 30px; font-weight: bolder'>Software Engineer</h2>",
+        "<h2 style='font-family: monospace; height: 30px; font-weight: bolder'>Static Typing Fanatic</h2>",
         "<h2 style='font-family: monospace; height: 30px; font-weight: bolder'>Software Developer</h2>",
-    ]
+    ];
     let career_handler = (career_paths_current_index) => {
         let career_path_dom_element = document.getElementById("career_path");
         career_path_dom_element.innerHTML = career_paths[career_paths_current_index]
         let new_career_paths_current_index = career_paths_current_index + 1;
         if (new_career_paths_current_index !== career_paths.length) {
-            setTimeout(() => career_handler(new_career_paths_current_index), new_career_paths_current_index * 200 + 100)
+            setTimeout(() => career_handler(new_career_paths_current_index), new_career_paths_current_index * 100 + 50)
         }
     };
-    career_handler(0)
+    career_handler(0);
 
 
     let languages = [
-        "coq",
+        "zig",
         "idris",
-        "clojure"
-    ]
+        "clojure",
+        "R",
+        "julia",
+        "coq",
+    ];
 
     let type_out = (string, time, el) => {
-        let time_per_char = time / string.length
+        let time_per_char = time / string.length;
         let char = string[0];
         let rest = string.slice(1);
         el.innerText += char;
-        el.style.whiteSpace = "break-spaces"
+        el.style.whiteSpace = "break-spaces";
         if (rest.length !== 0) {
             setTimeout(() => type_out(rest, time - (time_per_char), el), ((0.5 + Math.random()) * time_per_char))
         }
-    }
+    };
 
-    setTimeout(() => type_out("thanks for having a look!", 2500, document.getElementById("type_me")), 40_000)
+    setTimeout(() => type_out("thanks for having a look!", 2500, document.getElementById("type_me")), 40_000);
 
     let change_lang = () => {
         let lang_dom_element = document.getElementById("language");
         lang_dom_element.innerText = languages
-            .sort((_, __) => Math.random() * 2 - 1)
-            .reduce((acc, x, i) => acc + x + ((i === languages.length - 2) ? ", and " : ", "), "").slice(0, -2)
+            .sort(() => Math.random() * 2 - 1)
+            .slice(0, 3)
+            .reduce((acc, x, i) => acc + x + ((i === languages.length - 2) ? ", and " : ", "), "")
+            .slice(0, -2);
     }
 
     change_lang()
